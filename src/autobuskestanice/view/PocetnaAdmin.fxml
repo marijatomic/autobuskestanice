@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="399.999977929685" prefWidth="1048.9998779296875" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.PocetnaAdminController">
+  <children>
+    <Pane id="pane" layoutX="0.0" layoutY="99.0" opacity="1.0" prefHeight="201.0" prefWidth="1049.0" styleClass="pane">
+      <children>
+        <ImageView id="profil1.png" fitHeight="100.0" fitWidth="100.0" layoutX="90.0" layoutY="50.0" styleClass="profil1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/profil1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="karte1.png" fitHeight="100.0" fitWidth="100.0" layoutX="270.0" layoutY="50.0" styleClass="karte1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/karte1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="linije1.png" fitHeight="100.0" fitWidth="100.0" layoutX="469.0" layoutY="50.0" styleClass="linije1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/linije1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="voznje1.png" fitHeight="100.0" fitWidth="100.0" layoutX="662.0" layoutY="50.0" styleClass="voznje1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/voznje1.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="profilBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" layoutX="90.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnprofil" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="PROFIL" textFill="WHITE" visible="true">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button id="profilBtn" fx:id="linijeBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="469.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnlinije" opacity="1.0" prefWidth="100.0" styleClass=", profilBtn" text="LINIJE" textFill="WHITE" visible="true" />
+        <Button id="profilBtn" fx:id="voznjeBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="662.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnvoznje" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="VOŽNJE" textFill="WHITE" visible="true" />
+        <Button id="profilBtn" fx:id="karteBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="270.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnkarte" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="KARTE" textFill="WHITE" visible="true" />
+        <ImageView id="zaposlenici1.png" fitHeight="100.0" fitWidth="100.0" layoutX="852.0" layoutY="50.0" styleClass="zaposlenici1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/zaposlenici1.png" />
+          </image>
+        </ImageView>
+        <Button id="profilBtn" fx:id="zaposleniciBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="852.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnzaposlenici" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="ZAPOSLENICI" textFill="WHITE" visible="true" />
+      </children>
+      <stylesheets>
+        <URL value="@pocetna.css" />
+      </stylesheets>
+    </Pane>
+      <Label layoutX="388.0" layoutY="34.0" prefHeight="40.0" prefWidth="273.0" text="AUTOBUSKA STANICA" textFill="#006641">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="odjavaBtn" layoutX="985.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnodjava" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0" styleClass="logout">
+               <image>
+                  <Image url="@../../../../../../../Downloads/logout-sign.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+  </children>
+  <stylesheets>
+    <URL value="@pocetna.css" />
+  </stylesheets>
+</AnchorPane>

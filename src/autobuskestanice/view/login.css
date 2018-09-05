@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+ImageView.background {
+    -fx-image: url("background.png"); 
+}

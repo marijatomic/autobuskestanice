@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="487.0" prefWidth="918.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.PregledKartiController">
+  <children>
+      <ImageView fitHeight="167.0" fitWidth="941.0" layoutY="336.0" styleClass="bus">
+         <image>
+            <Image url="@../../../../../../../Downloads/bus1.png" />
+         </image>
+      </ImageView>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="66.0" prefWidth="938.0001220703125">
+      <children>
+        <ImageView id="karte.png" fitHeight="41.0" fitWidth="41.333473205566406" layoutX="62.0" layoutY="16.0" styleClass="karte">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/karte.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+    <GridPane layoutX="16.0" layoutY="66.0" prefHeight="310.0" prefWidth="905.0">
+      <children>
+        <TableView fx:id="karteTbl" prefHeight="320.0" prefWidth="791.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <columns>
+            <TableColumn fx:id="idTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="dizdavanjaTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="121.0" text="Datum izdavanja" />
+            <TableColumn fx:id="vizdavanjaTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="Vrijeme izdavanja" />
+            <TableColumn fx:id="mpolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="105.0" text="Mjesto polaska" />
+            <TableColumn fx:id="mdolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Mjesto dolaska" />
+            <TableColumn fx:id="vpolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Vrijeme polaska" />
+            <TableColumn fx:id="vdolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="103.0" text="Vrijeme dolaska" />
+            <TableColumn fx:id="sjedisteTblCol" prefWidth="75.0" text="Sjedište" />
+            <TableColumn fx:id="cijenaTblCol" prefWidth="75.0" text="Cijena" />
+            <TableColumn fx:id="vrstaTblCol" prefWidth="75.0" text="Vrsta karte" />
+            <TableColumn fx:id="popustTblCol" prefWidth="75.0" text="Popust" />
+            <TableColumn fx:id="imezTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Ime zaposlenika" />
+            <TableColumn fx:id="prezimezTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="128.0" text="Prezime zaposlenika" />
+            <TableColumn fx:id="tipTblCol" prefWidth="75.0" text="Tip" />
+          </columns>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="905.0" minWidth="10.0" prefWidth="905.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.0" minWidth="0.0" prefWidth="0.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+      <Button fx:id="vrsteBtn" layoutX="765.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnvrste" prefHeight="25.0" prefWidth="156.0" text="PREGLED VRSTA KARTI" textFill="#006641">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+  </children>
+  <stylesheets>
+    <URL value="@pregledkarti.css" />
+  </stylesheets>
+</AnchorPane>

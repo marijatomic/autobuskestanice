@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="871.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.PocetnaController">
+  <children>
+    <Pane fx:id="pane" layoutX="0.0" layoutY="110.0" opacity="1.0" prefHeight="200.0" prefWidth="871.0" styleClass="pane">
+      <children>
+        <ImageView id="profil1.png" fx:id="profil1" fitHeight="100.0" fitWidth="100.0" layoutX="90.0" layoutY="50.0" styleClass="profil1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/profil1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="karte1.png" fx:id="karte1" fitHeight="100.0" fitWidth="100.0" layoutX="270.0" layoutY="50.0" styleClass="karte1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/karte1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="linije1.png" fx:id="linije1" fitHeight="100.0" fitWidth="100.0" layoutX="469.0" layoutY="50.0" styleClass="linije1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/linije1.png" />
+          </image>
+        </ImageView>
+        <ImageView id="voznje1.png" fx:id="voznje1" fitHeight="100.0" fitWidth="100.0" layoutX="662.0" layoutY="50.0" styleClass="voznje1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/voznje1.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="profilBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" layoutX="90.0" layoutY="166.0" mnemonicParsing="false" onAction="#btnprofil" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="PROFIL" textFill="WHITE" visible="true">
+          <font>
+            <Font name="System Bold" size="12.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button id="profilBtn" fx:id="linijeBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="469.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnlinije" opacity="1.0" prefWidth="100.0" styleClass=", profilBtn" text="LINIJE" textFill="WHITE" visible="true" />
+        <Button id="profilBtn" fx:id="voznjeBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="662.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnvoznje" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="VOŽNJE" textFill="WHITE" visible="true" />
+        <Button id="profilBtn" fx:id="karteBtn" cancelButton="false" defaultButton="false" disable="false" focusTraversable="true" font="$x1" layoutX="270.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnkarte" opacity="1.0" prefWidth="100.0" styleClass="profilBtn" text="KARTE" textFill="WHITE" visible="true" />
+      </children>
+    </Pane>
+      <Label layoutX="299.0" layoutY="35.0" prefHeight="40.0" prefWidth="273.0" text="AUTOBUSKA STANICA" textFill="#006641">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="odjavaBtn" layoutX="807.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnodjava" prefHeight="40.0" prefWidth="40.0">
+         <graphic>
+            <ImageView fx:id="logout" fitHeight="35.0" fitWidth="34.0" styleClass="logout">
+               <image>
+                  <Image url="@../../../../../../../Downloads/logout-sign.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+  </children>
+  <stylesheets>
+    <URL value="@pocetna.css" />
+  </stylesheets>
+</AnchorPane>

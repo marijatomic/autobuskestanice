@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+Pane.pane{
+    -fx-background-color:#009962;
+}
+
+ImageView.karte1{
+    -fx-image: url("karte1.png");
+}
+
+ImageView.bus {
+    -fx-image: url("bus.png");
+}

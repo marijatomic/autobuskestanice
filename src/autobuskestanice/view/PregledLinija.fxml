@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="785.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.PregledLinijaController">
+  <children>
+      <ImageView fitHeight="152.0" fitWidth="817.0" layoutY="355.0" styleClass="bus">
+         <image>
+            <Image url="@../../../../../../../Downloads/bus1.png" />
+         </image>
+      </ImageView>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="66.0" prefWidth="785.0">
+      <children>
+        <ImageView id="linije.png" fx:id="linije" fitHeight="41.0" fitWidth="41.33349609375" layoutX="58.0" layoutY="13.0" styleClass="linije">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/linije.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+    <GridPane layoutX="14.0" layoutY="75.0" prefHeight="311.0" prefWidth="401.0">
+      <children>
+        <TableView id="zaposleniciTbl" fx:id="linijeTbl" prefHeight="311.0" prefWidth="302.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <columns>
+            <TableColumn fx:id="idTblCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nazivTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="125.0" text="Naziv linije" />
+            <TableColumn fx:id="polazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Mjesto polaska" />
+            <TableColumn fx:id="dolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="96.0" text="Mjesto dolaska" />
+            <TableColumn fx:id="cijenaTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="76.0" text="Cijena" />
+          </columns>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="645.0" minWidth="10.0" prefWidth="401.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="614.0" minWidth="0.0" prefWidth="0.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Label layoutX="435.0" layoutY="89.0" prefWidth="63.0" text="ID:">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x4" />
+      </font>
+      <textFill>
+        <Color blue="0.255" green="0.400" red="0.000" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x4" layoutX="435.0" layoutY="178.0" text="Mjesto polaska:" textFill="$x3" />
+    <Label font="$x4" layoutX="435.0" layoutY="223.0" text="Mjesto dolaska:" textFill="$x3" />
+    <Label font="$x4" layoutX="435.0" layoutY="268.0" text="Cijena:" textFill="$x3" />
+    <TextField fx:id="idTF" layoutX="539.0" layoutY="82.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+    <TextField id="idTF" fx:id="nazivTF" layoutX="539.0" layoutY="126.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+    <TextField id="idTF" fx:id="mpolazakTF" layoutX="539.0" layoutY="171.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+    <TextField id="idTF" fx:id="mdolazakTF" layoutX="539.0" layoutY="216.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+    <Button id="dodajZaposlenika" font="$x4" layoutX="541.0" layoutY="315.0" mnemonicParsing="false" onAction="#spremi_liniju" prefHeight="25.0" prefWidth="41.0" textFill="#0029ff">
+         <graphic>
+            <ImageView fx:id="insert" fitHeight="32.0" fitWidth="32.0" styleClass="insert">
+               <image>
+                  <Image url="@../../../../../../../Downloads/add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    <Button id="uredi" font="$x4" layoutX="610.0" layoutY="315.0" mnemonicParsing="false" onAction="#uredi_liniju" prefHeight="40.0" prefWidth="48.0" textFill="$x3">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" styleClass="update">
+               <image>
+                  <Image url="@../../../../../../../Downloads/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    <Button id="obrisiZaposlenika" font="$x4" layoutX="681.0" layoutY="315.0" mnemonicParsing="false" onAction="#obrisi_liniju" prefHeight="40.0" prefWidth="48.0" textFill="RED">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" styleClass="delete">
+               <image>
+                  <Image url="@../../../../../../../Downloads/delete.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    <Label font="$x4" layoutX="435.0" layoutY="133.0" text="Naziv linije:" textFill="$x3" />
+    <TextField id="idTF" fx:id="cijenaTF" layoutX="539.0" layoutY="261.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+  </children>
+  <stylesheets>
+    <URL value="@pregledlinija.css" />
+  </stylesheets>
+</AnchorPane>

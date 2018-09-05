@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+ImageView.insert{
+    -fx-image: url("add.png");
+}
+ImageView.update{
+    -fx-image: url("refresh.png");
+}
+ImageView.delete{
+    -fx-image: url("delete.png");
+}
+ImageView.karte{
+    -fx-image: url("karte.png");
+}
+ImageView.bus {
+    -fx-image: url("bus.png");
+}
+

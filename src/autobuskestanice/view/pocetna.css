@@ -1,0 +1,35 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+Pane.pane{
+    -fx-background-color:#009962;
+}
+ImageView.profil1{
+    -fx-image: url("profil1.png");
+}
+ImageView.karte1{
+    -fx-image: url("karte1.png");
+}
+ImageView.linije1{
+    -fx-image: url("linije1.png");
+}
+
+ImageView.voznje1{
+    -fx-image: url("voznje1.png");
+}
+ImageView.zaposlenici1{
+    -fx-image: url("zaposlenici1.png");
+}
+
+ImageView.logout{
+    -fx-image: url("logout.png");
+}
+
+Button.profilBtn{
+    -fx-color:#009962;
+
+}

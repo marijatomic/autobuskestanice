@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="608.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.VrsteKartiController">
+    <stylesheets>
+        <URL value="@vrstekarti.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="173.0" fitWidth="608.0" layoutY="270.0" styleClass="bus">
+         <image>
+            <Image url="@../../../../../../../Downloads/bus.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="299.0" layoutY="71.0" prefWidth="63.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="12.0" fx:id="x4" />
+         </font>
+         <textFill>
+            <Color blue="0.255" green="0.400" red="0.000" fx:id="x3" />
+         </textFill>
+      </Label>
+      <Label font="$x4" layoutX="298.0" layoutY="110.0" text="Naziv vrste:" textFill="$x3" />
+      <Label font="$x4" layoutX="300.0" layoutY="151.0" text="Popust:" textFill="$x3" />
+      <TextField fx:id="idTF" layoutX="377.0" layoutY="64.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+      <TextField fx:id="nazivTF" layoutX="377.0" layoutY="103.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+      <TextField fx:id="popustTF" layoutX="377.0" layoutY="144.0" prefHeight="30.0" prefWidth="199.9998779296875" />
+      <Button id="dodajZaposlenika" font="$x4" layoutX="377.0" layoutY="187.0" mnemonicParsing="false" onAction="#spremi_vrstu" prefHeight="25.0" prefWidth="41.0" textFill="#0029ff">
+         <graphic>
+            <ImageView fx:id="insert" fitHeight="32.0" fitWidth="32.0" styleClass="insert">
+               <image>
+                  <Image url="@../../../../../../../Downloads/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="uredi" font="$x4" layoutX="453.0" layoutY="187.0" mnemonicParsing="false" onAction="#uredi_vrstu" prefHeight="40.0" prefWidth="48.0" textFill="$x3">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" styleClass="update">
+               <image>
+                  <Image url="@../../../../../../../Downloads/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="obrisiZaposlenika" font="$x4" layoutX="529.0" layoutY="187.0" mnemonicParsing="false" onAction="#obrisi_vrstu" prefHeight="40.0" prefWidth="48.0" textFill="RED">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" styleClass="delete">
+               <image>
+                  <Image url="@../../../../../../../Downloads/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ScrollPane layoutX="14.0" layoutY="64.0" prefHeight="276.0" prefViewportHeight="274.0" prefViewportWidth="272.0" prefWidth="264.0">
+         <content>
+            <TableView id="zaposleniciTbl" fx:id="vrsteTbl" layoutX="14.0" layoutY="50.0" prefHeight="274.0" prefWidth="272.0">
+               <columns>
+                  <TableColumn fx:id="idTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="68.0" text="ID" />
+                  <TableColumn fx:id="nazivTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="103.0" text="Naziv vrste" />
+                  <TableColumn fx:id="popustTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Popust" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane prefHeight="66.0" prefWidth="602.0">
+         <children>
+            <ImageView id="karte.png" fitHeight="41.0" fitWidth="41.333473205566406" layoutX="62.0" layoutY="16.0" styleClass="karte">
+               <image>
+                  <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/karte.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

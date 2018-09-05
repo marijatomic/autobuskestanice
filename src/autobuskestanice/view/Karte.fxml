@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="513.999977929685" prefWidth="926.0000999999975" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autobuskestanice.controller.KarteController">
+  <children>
+      <ImageView fitHeight="173.0" fitWidth="543.0" layoutX="-5.0" layoutY="343.0" styleClass="bus">
+         <image>
+            <Image url="@../../../../../../../Downloads/bus.png" />
+         </image>
+      </ImageView>
+    <Pane id="pane" layoutX="0.0" layoutY="0.0" opacity="1.0" prefHeight="67.0" prefWidth="926.0001220703125" styleClass="pane">
+      <children>
+        <ImageView id="karte1.png" fx:id="karte1" fitHeight="50.0" fitWidth="50.0" layoutX="55.0" layoutY="9.0" styleClass="karte1">
+          <image>
+            <Image preserveRatio="true" smooth="true" url="@../../../../../../../Desktop/karte1.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+    <GridPane layoutX="14.0" layoutY="84.0" prefHeight="328.0" prefWidth="524.0" snapToPixel="true">
+      <children>
+        <TableView fx:id="karteTbl" prefHeight="349.0" prefWidth="423.0000999999975" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <columns>
+            <TableColumn fx:id="idTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="59.0" text="ID" />
+            <TableColumn fx:id="dizdavanjaTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Datum izdavanja" />
+            <TableColumn fx:id="vizdavanjaTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="112.0" text="Vrijeme izdavanja" />
+            <TableColumn fx:id="mpolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Mjesto polaska" />
+            <TableColumn fx:id="mdolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="Mjesto dolaska" />
+            <TableColumn fx:id="vpolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Vrijeme polaska" />
+            <TableColumn fx:id="vdolazakTblCol" maxWidth="5000.0" minWidth="10.0" prefWidth="102.0" text="Vrijeme dolaska" />
+            <TableColumn fx:id="sjedisteTblCol" prefWidth="75.0" text="Sjedište" />
+            <TableColumn fx:id="cijenaTblCol" prefWidth="75.0" text="Cijena" />
+            <TableColumn fx:id="vrstaTblCol" prefWidth="75.0" text="Vrsta karte" />
+            <TableColumn fx:id="popustTblCol" prefWidth="75.0" text="Popust" />
+            <TableColumn fx:id="tipTblCol" prefWidth="75.0" text="Tip" />
+          </columns>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="729.0" minWidth="10.0" prefWidth="710.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="0.0" prefWidth="19.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Label layoutX="570.0" layoutY="142.0" prefHeight="30.0" prefWidth="220.0" text="Datum izdavanja:">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.255" green="0.400" red="0.000" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="570.0" layoutY="190.0" prefHeight="30.0" prefWidth="220.0" text="Vrijeme izdavanja:" textFill="$x2" />
+    <Label font="$x1" layoutX="570.0" layoutY="233.0" prefHeight="30.0" prefWidth="220.0" text="Vožnja:" textFill="$x2" />
+    <Label layoutX="453.0" layoutY="205.0" text="" />
+    <Label font="$x1" layoutX="570.0" layoutY="272.0" prefHeight="30.0" prefWidth="220.0" text="Sjedište:" textFill="$x2" />
+    <Label font="$x1" layoutX="570.0" layoutY="313.0" prefHeight="30.0" prefWidth="220.0" text="Vrsta karte:" textFill="$x2" />
+    <Label font="$x1" layoutX="570.0" layoutY="356.0" prefHeight="30.0" prefWidth="220.0" text="KONAČNA CIJENA:" textFill="$x2" />
+    <TextField fx:id="vizdavanjaTF" layoutX="683.0" layoutY="190.0" prefHeight="30.0" prefWidth="200.0" />
+    <TextField fx:id="sjedisteTF" layoutX="683.0" layoutY="272.0" prefHeight="30.0" prefWidth="200.0" />
+    <Label fx:id="kcijenaLab" layoutX="693.0" layoutY="356.0" prefHeight="30.0" prefWidth="200.0" text="">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <Button fx:id="prodaj" font="$x1" layoutX="570.0" layoutY="441.0" mnemonicParsing="false" onAction="#prodaj_kartu" prefHeight="26.0" prefWidth="90.0" text="Prodaj" textFill="#0029ff" />
+    <Button fx:id="rezerviraj" font="$x1" layoutX="667.0" layoutY="441.0" mnemonicParsing="false" onAction="#rezerviraj_kartu" prefHeight="26.0" prefWidth="76.0" text="Rezerviraj" textFill="#310099" />
+    <Button id="rezerviraj" fx:id="otkazi" font="$x1" layoutX="749.0" layoutY="441.0" mnemonicParsing="false" onAction="#otkazi_rezervaciju" prefHeight="26.0" prefWidth="125.0" text="Otkaži rezervaciju" textFill="RED" />
+    <Label font="$x1" layoutX="570.0" layoutY="99.0" prefHeight="30.0" prefWidth="220.0" text="ID:" textFill="$x2" />
+    <TextField id="dizdavanjaTF" fx:id="idTF" layoutX="681.0" layoutY="99.0" prefHeight="30.0" prefWidth="200.0" />
+    <Button id="prodaj" fx:id="cijenaKarte" font="$x1" layoutX="570.0" layoutY="393.0" mnemonicParsing="false" onAction="#izracunajCijenuKarte" prefHeight="26.0" prefWidth="118.0" text="Izračunaj cijenu" textFill="$x2" />
+      <DatePicker fx:id="odbDatum" layoutX="680.0" layoutY="142.0" prefHeight="30.0" prefWidth="200.0" />
+      <ComboBox fx:id="voznjaCB" layoutX="683.0" layoutY="231.0" prefHeight="30.0" prefWidth="200.0" />
+      <ComboBox fx:id="vrstaCB" layoutX="683.0" layoutY="313.0" prefHeight="30.0" prefWidth="200.0" />
+  </children>
+  <stylesheets>
+    <URL value="@karte.css" />
+  </stylesheets>
+</AnchorPane>

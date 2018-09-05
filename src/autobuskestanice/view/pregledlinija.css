@@ -1,0 +1,35 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+ImageView.profil{
+    -fx-image: url("profil.png");
+}
+ImageView.zaposlenici{
+    -fx-image: url("zaposlenici.png");
+}
+ImageView.karte{
+    -fx-image: url("karte.png");
+}
+ImageView.linije{
+    -fx-image: url("linije.png");
+}
+ImageView.insert{
+    -fx-image: url("add.png");
+}
+ImageView.update{
+    -fx-image: url("refresh.png");
+}
+ImageView.delete{
+    -fx-image: url("delete.png");
+}
+ImageView.voznja{
+    -fx-image: url("voznje.png");
+}
+
+ImageView.bus {
+    -fx-image: url("bus2.png");
+}
